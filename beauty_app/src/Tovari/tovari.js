@@ -18,7 +18,7 @@ import Dokdo10 from '../../public/Dokdo10.jpg';
 import Dokdo11 from '../../public/Dokdo11.jpg';
 import Dokdo12 from '../../public/Dokdo12.jpg';
 import Dokdo13 from '../../public/Dokdo13.jpg';
-import Clarins1 from '../../public/Clarins1.jpg';
+import Clarins1 from '../../public/clarins1.1.webp';
 
 
 
