@@ -31,19 +31,19 @@ function Header() {
           isOpen ? 'block' : 'hidden'
         } lg:flex lg:gap-5 lg:items-center absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none`}
       >
-        <Link to="/" className="block px-4 py-2 text-lg lg:px-0 lg:py-0">
+        <Link to="/" className="block px-4 py-2 text-lg lg:px-0 lg:py-0" style={{userSelect: "none"}}>
           Басты бет
         </Link>
-        <Link to="/blog" className="block px-4 py-2 text-lg lg:px-0 lg:py-0">
+        <Link to="/blog" className="block px-4 py-2 text-lg lg:px-0 lg:py-0" style={{userSelect: "none"}}>
           Блог
         </Link>
-        <Link to="/katalog" className="block px-4 py-2 text-lg lg:px-0 lg:py-0">
+        <Link to="/katalog" className="block px-4 py-2 text-lg lg:px-0 lg:py-0" style={{userSelect: "none"}}>
           Өнім карталары
         </Link>
-        <Link to="/contact" className="block px-4 py-2 text-lg lg:px-0 lg:py-0">
+        <Link to="/contact" className="block px-4 py-2 text-lg lg:px-0 lg:py-0" style={{userSelect: "none"}}>
           Контакты
         </Link>
-        <button onClick={() => setIsOpenCart(!isOpenCart)} className="relative">
+        <button onClick={() => setIsOpenCart(!isOpenCart)} className="relative" style={{userSelect: "none"}}>
           <img src={HeartIcon} alt="Heart" className="w-6 h-6 pt-2" />
           <span className="text-xl absolute top-0 right-[-15px] bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[15px]">
             {likedItems.length}
