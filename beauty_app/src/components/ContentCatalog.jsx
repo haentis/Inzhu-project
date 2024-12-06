@@ -10,6 +10,12 @@ function ContentCatalog() {
         return savedLikes ? JSON.parse(savedLikes) : {};
     });
 
+    const [isVisible, setIsVisible] = useState(false); // Показ/скрытие уведомления
+    const [isAnimating, setIsAnimating] = useState(false); // Анимация (вход/выход)
+    
+
+    
+
 
     useEffect(() => {
         localStorage.setItem('likedItems', JSON.stringify(likedItems));
@@ -25,7 +31,20 @@ function ContentCatalog() {
             }
             return updatedLikes;
         });
+
     }, []);
+
+
+    const showNotification = useCallback(() => {
+        setIsVisible(true); 
+        setIsAnimating(true); 
+    
+        setTimeout(() => {
+            setIsAnimating(false); 
+            setTimeout(() => setIsVisible(false), 500);
+        }, 1000);
+    }, []);
+    
 
     return (
         <div className="w-full h-auto flex flex-row flex-wrap gap-14 justify-center">
@@ -42,6 +61,7 @@ function ContentCatalog() {
                         onClick={(event) => {
                             event.stopPropagation(); // Предотвращает переход по ссылке
                             toggleLike(item.id, item);
+                            showNotification(); 
                         }}
                     >
                         таңдаулылар
@@ -53,7 +73,14 @@ function ContentCatalog() {
                     </div>
                 </div>
             ))}
-            <div className="w-52 h-12 bg-green-600  rounded-sm shadow-2xl right-0  fixed  flex justify-center items-center cursor-default text-white" style={{userSelect: "none"}}>Добавлено в избранное!</div>
+          <div
+            className={`fixed right-0 bottom-5 w-52 h-12 bg-green-600 rounded-sm shadow-2xl flex justify-center items-center text-white transition-transform duration-500 ${
+                isVisible ? (isAnimating ? 'translate-x-0' : 'translate-x-full') : 'hidden'
+            }`}
+            style={{ userSelect: 'none' }}
+            >
+            Добавлено в избранное!
+            </div>
         </div>
     );
 }
