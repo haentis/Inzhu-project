@@ -31,7 +31,7 @@ function ContentCatalog() {
             {Tovari.map((item) => (
                 <div key={item.id} className=" block p-4 border border-gray-300 w-[27%] mt-40 flex flex-col gap-5  rounded-lg  hover:shadow-2xl ease-in-out duration-300">
                     <Link to={`/post/${item.id}`} className="flex flex-col gap-5">
-                        <img src={item.img} alt={item.title} className="w-auto h-[300px]" style={{userSelect: "none"}} />
+                        <img src={item.img} alt={item.title} className="w-auto h-[300px]" />
                         <h2 className="text-xl font-bold">{item.title}</h2>
                         <p className="text-xl">{item.desc}</p>
                     </Link>
