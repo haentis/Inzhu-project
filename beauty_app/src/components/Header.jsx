@@ -16,8 +16,8 @@ function Header() {
   }, [isOpenCart]); 
 
   return (
-    <header className="w-full h-16 flex items-center justify-between px-5 bg-white relative">
-      <p className="text-xl">GlowCare</p>
+    <header className="w-full h-16 flex items-center justify-between px-5 bg-white relative  shadow-xl">
+      <p className="text-xl cursor-default">GlowCare</p>
 
       <button
         className="lg:hidden text-xl focus:outline-none"
@@ -42,9 +42,6 @@ function Header() {
         </Link>
         <Link to="/contact" className="block px-4 py-2 text-lg lg:px-0 lg:py-0">
           Контакты
-        </Link>
-        <Link to="/about" className="block px-4 py-2 text-lg lg:px-0 lg:py-0">
-          Біз туралы
         </Link>
         <button onClick={() => setIsOpenCart(!isOpenCart)} className="relative">
           <img src={HeartIcon} alt="Heart" className="w-6 h-6 pt-2" />

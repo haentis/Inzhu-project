@@ -1,6 +1,6 @@
 import Dalbafirst from '../../public/D`albaWhiteT.jpg';
 import DalbaSecond from '../../public/Dalba2.jpg';
-import DalbaThird from '../../public/Dalba3.jpg';
+import DalbaThird from '../../public/Dalba3.3.jpg';
 import DalbaFourth from '../../public/Dalba4.jpg';
 import DalbaFifth from '../../public/Dalba5.jpg';
 import DalbaSixth from '../../public/Dalba6.jpg';

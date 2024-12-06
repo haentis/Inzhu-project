@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Tovari } from "../Tovari/tovari";
 import whiteHeartIcon from '../assets/whiteHeartIcon.png';
 import redHeartIcon from '../assets/redHeartIcon.png';
+import { Link } from "react-router-dom";
 
 function ContentCatalog() {
     const [likedItems, setLikedItems] = useState(() => {
@@ -13,7 +14,7 @@ function ContentCatalog() {
         localStorage.setItem('likedItems', JSON.stringify(likedItems));
     }, [likedItems]);
 
-    const toggleLike = (id, item) => {
+    const toggleLike = useCallback((id, item) => {
         setLikedItems((prev) => {
             const updatedLikes = { ...prev };
             if (updatedLikes[id]) {
@@ -21,21 +22,26 @@ function ContentCatalog() {
             } else {
                 updatedLikes[id] = item;
             }
-            return updatedLikes; // Возвращаем обновлённое состояние
+            return updatedLikes;
         });
-    };
+    }, []);
 
     return (
         <div className="w-full h-auto flex flex-row flex-wrap gap-14 justify-center">
             {Tovari.map((item) => (
-                <div key={item.id} className="p-4 border border-gray-300 w-[27%] mt-40 flex flex-col gap-5">
-                    <img src={item.img} alt={item.title} />
-                    <h2 className="text-xl font-bold">{item.title}</h2>
-                    <p className="text-xl">{item.desc}</p>
+                <div key={item.id} className=" block p-4 border border-gray-300 w-[27%] mt-40 flex flex-col gap-5  rounded-lg  hover:shadow-2xl ease-in-out duration-300">
+                    <Link to={`/post/${item.id}`} className="flex flex-col gap-5">
+                        <img src={item.img} alt={item.title} />
+                        <h2 className="text-xl font-bold">{item.title}</h2>
+                        <p className="text-xl">{item.desc}</p>
+                    </Link>
                     <div
-                        className="button_fav group w-[80%] h-[50px] bg-green-600 flex justify-center items-center text-xl text-white cursor-pointer gap-5 m-auto"
+                        className="button_fav group w-[80%] h-[50px] bg-green-600 flex justify-center items-center text-xl text-white cursor-pointer rounded-lg gap-5 m-auto active:scale-95 transition-transform duration-150"
                         style={{ userSelect: "none" }}
-                        onClick={() => toggleLike(item.id, item)}
+                        onClick={(event) => {
+                            event.stopPropagation(); // Предотвращает переход по ссылке
+                            toggleLike(item.id, item); // Лайк
+                        }}
                     >
                         таңдаулылар
                         <img

@@ -70,9 +70,9 @@ function Quiz() {
   return (
     <>
     <Header/>
-    <div className="w-full h-screen rounded-md bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col justify-center items-center text-white absolute">
-      <div className="w-[90%] max-w-2xl bg-gray-700 rounded-lg shadow-lg p-6 text-center">
-        <p className="text-2xl font-semibold mb-8">{currentQuestion.question}</p>
+    <div className="w-full h-screen rounded-md bg-gradient-to-br from-custom5 to-green-800 flex flex-col justify-center items-center text-white absolute">
+      <div className="w-[90%] max-w-2xl bg-white rounded-lg shadow-lg p-6 text-center">
+        <p className="text-2xl text-black font-semibold mb-8">{currentQuestion.question}</p>
         <div className="grid grid-cols-1 gap-4">
           {currentQuestion.options.map((option, index) => (
             <button
