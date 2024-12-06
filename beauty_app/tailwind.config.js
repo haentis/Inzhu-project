@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        serif: ['Merriweather', 'serif'], 
+      },
       colors:{
         custom: 'rgba(72, 91, 96, 1)', 
         custom2: 'rgba(236, 232, 217, 1)',

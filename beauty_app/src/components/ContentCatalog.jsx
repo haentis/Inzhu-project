@@ -10,6 +10,7 @@ function ContentCatalog() {
         return savedLikes ? JSON.parse(savedLikes) : {};
     });
 
+
     useEffect(() => {
         localStorage.setItem('likedItems', JSON.stringify(likedItems));
     }, [likedItems]);
@@ -40,7 +41,7 @@ function ContentCatalog() {
                         style={{ userSelect: "none" }}
                         onClick={(event) => {
                             event.stopPropagation(); // Предотвращает переход по ссылке
-                            toggleLike(item.id, item); // Лайк
+                            toggleLike(item.id, item);
                         }}
                     >
                         таңдаулылар
@@ -52,6 +53,7 @@ function ContentCatalog() {
                     </div>
                 </div>
             ))}
+            <div className="w-52 h-12 bg-green-600  rounded-sm shadow-2xl right-0  fixed  flex justify-center items-center cursor-default text-white" style={{userSelect: "none"}}>Добавлено в избранное!</div>
         </div>
     );
 }

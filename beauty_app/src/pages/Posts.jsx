@@ -11,7 +11,7 @@ function Posts(){
         <>
           <Header/>
           <div className="w-full h-[700px] flex  items-center justify-center">
-            <Link to={'/katalog'} className="text-3xl"><img src={backIcon} alt="" className="hover:translate-x-[-16px] ease-in-out duration-300" /></Link>
+            <Link to={'/katalog'} className="text-3xl"><img src={backIcon} alt="" className="hover:translate-x-[-16px] ease-out duration-300" /></Link>
              <div className="w-[90%] h-[600px] bg-white flex  flex-row gap-8">
                 <img src={product.img} alt="" className="w-[40%] shadow-2xl rounded-lg"/>
                 <div className="flex flex-col gap-20">

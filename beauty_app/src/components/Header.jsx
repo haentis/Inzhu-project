@@ -17,7 +17,7 @@ function Header() {
 
   return (
     <header className="w-full h-16 flex items-center justify-between px-5 bg-white relative  shadow-xl">
-      <p className="text-xl cursor-default">GlowCare</p>
+      <p className="text-xl cursor-default font-bold">GlowCare</p>
 
       <button
         className="lg:hidden text-xl focus:outline-none"
@@ -45,7 +45,7 @@ function Header() {
         </Link>
         <button onClick={() => setIsOpenCart(!isOpenCart)} className="relative" style={{userSelect: "none"}}>
           <img src={HeartIcon} alt="Heart" className="w-6 h-6 pt-2" />
-          <span className="text-xl absolute top-0 right-[-15px] bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[15px]">
+          <span className="text-xl absolute top-0 right-[-15px] bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[13px]">
             {likedItems.length}
           </span>
         </button>
