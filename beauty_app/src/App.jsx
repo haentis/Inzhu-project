@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 // import { Tovari } from './Tovari/tovari';
 import Quiz from './pages/Quiz';
 import Posts from './pages/Posts';
+import Post from './pages/Post';
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
               <Route path="/Contact" element={<Contact />} />
               {/* <Route path="/About" element={<AboutUs />} /> */}
               <Route path="/Quiz" element={<Quiz />} />
-              <Route path={`post/:id`} element={<Posts />} />
+              <Route path={`tovar/:id`} element={<Posts />} />
+              <Route path={`post/:id`} element={<Post />} />
             </Routes>
          </Router>
     </>

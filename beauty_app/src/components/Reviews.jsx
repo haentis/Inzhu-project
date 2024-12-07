@@ -4,7 +4,7 @@ import reviewsImage2 from '../assets/reviewsImages2.png';
 function Reviews(){
     return(
         <>
-            <div className="w-full h-[1000px]  flex justify-center items-center mt-16">
+            <div className="w-full h-[1000px]  flex justify-center items-center mt-16" style={{ userSelect: "none" }}>
                 <div className="w-4/5 h-[500px] bg-white  flex flex-row gap-40">
                     <img src={menImage} alt=""  className=''/>
                     <div className='w-[500px] h-[500px] '>
