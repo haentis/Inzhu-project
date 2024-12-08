@@ -57,7 +57,7 @@ function Post() {
                                 </span>
                             </button>
 
-                            {/* Скрытый контент факта */}
+                            {/* Скрытый контент факта */}                       
                             {visibleIndexes.includes(index) && (
                                 <p className="text-lg text-gray-600 mt-2">
                                     {item.fact}
