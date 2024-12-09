@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router";
 import { Tovari } from "../Tovari/tovari";
 import Header from "../components/Header";
 import backIcon from '../../public/back.png';
+import Footer from "../components/footer";
 
 
 function Posts(){
@@ -24,6 +25,7 @@ function Posts(){
                 
              </div>
           </div>
+          <Footer/>
         </>
     )
 }

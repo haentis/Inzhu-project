@@ -10,7 +10,7 @@ function PostBlog(){
           {
             posts.map((item) => (
                 <div key={item.id} className="w-[90%] h-[400px] bg-white mt-10 flex flex-row border-solid border-2 rounded-lg border-gray-500 shadow-md transition-transform transform hover:scale-[1.01] hover:shadow-2xl duration-300">
-                    <img src={item.imagePost} alt="" />
+                    <img src={item.imagePost} alt=""  className="w-96"/>
                     <div className=''>
                         <p className='text-2xl p-4' style={{ userSelect: "none" }}>{item.title}</p>
                         <p className='text-xl p-5' style={{ userSelect: "none" }}>

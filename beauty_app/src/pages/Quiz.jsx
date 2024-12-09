@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { QuizData } from "../quiz/quizData";
 import Header from "../components/Header";
+import Footer from "../components/footer";
 
 function Quiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -60,6 +61,7 @@ function Quiz() {
               Қайта өту
             </button>
           </div>
+      <Footer/>
       </>
      
     );
@@ -89,6 +91,7 @@ function Quiz() {
         {currentQuestionIndex + 1} / {QuizData.length}
       </div>
     </div>
+    <Footer/>
     </>
   );
 }
