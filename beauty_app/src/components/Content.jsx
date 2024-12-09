@@ -1,4 +1,4 @@
-import firstImage from "../assets/first.png";
+import firstImage from "../assets/dalbaMainpage.jpg";
 import secondImage from "../assets/second.png";
 import thirdImage from "../assets/third.png";
 import fourthimage from "../assets/fourth.png";
