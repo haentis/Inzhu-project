@@ -16,7 +16,7 @@ function Header() {
   }, [isOpenCart]); 
 
   return (
-    <header className="w-full h-16 flex items-center justify-between px-5 bg-white relative  shadow-xl">
+    <header className="w-full h-16 flex items-center justify-between px-5 bg-white relative z-40 shadow-xl">
       <p className="text-xl cursor-default font-bold">GlowCare</p>
 
       <button
