@@ -92,7 +92,7 @@ function Reviews() {
                 <img src={rev2} alt="Review 1" className="w-[400px]" />
                 <div className="w-[500px] h-[500px]">
                 <img src={reviewsImage2} alt="Review Icon 1" />
-                <p className="text-[17px] pt-11">
+                <p className="text-2xl pt-11">
                     Кремнің өте жағымды текстурасы бар. Ол жеңіл, сонымен қатар қоректендіретін.
                 </p>
                 <img src={reviewsImage2} alt="Reviewer" className="pt-10" />
