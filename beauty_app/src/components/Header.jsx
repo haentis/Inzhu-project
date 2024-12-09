@@ -52,24 +52,31 @@ function Header() {
       </nav>
 
       <div
-        className={`${
-          isOpenCart ? 'block' : 'hidden'
-        } bg-white w-[35%] h-[500px] absolute right-0 top-16 flex flex-col items-center shadow-2xl gap-5`}
-      >
-        <p className="text-xl">Таңдаулылар</p>
-        <div className="w-[90%] h-auto bg-gray-100 p-4 overflow-auto">
-          {likedItems.length > 0 ? (
-            likedItems.map((item) => (
-              <div key={item.id} className="p-4 border border-gray-300 mb-4">
-                <img src={item.img} alt={item.title} className="w-full h-auto" />
-                <h2 className="text-xl font-bold mt-2">{item.title}</h2>
-                <p className="text-lg">{item.desc}</p>
-              </div>
-            ))
-          ) : (
-            <p className="text-gray-500">Ештеңе таңдалмады.</p>
-          )}
-        </div>
+          className={`${
+            isOpenCart ? 'block' : 'hidden'
+          } bg-white w-[35%] h-[500px] absolute right-0 top-16 flex flex-col z-30 items-center shadow-lg rounded-xl overflow-hidden transition-all duration-300`}
+        >
+          <p className="text-2xl font-semibold py-4 text-center w-full border-b border-gray-300">
+            Таңдаулылар
+          </p>
+          <div className="w-[90%] h-auto bg-gray-50 p-4 overflow-auto flex flex-col gap-6">
+            {likedItems.length > 0 ? (
+              likedItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex flex-row items-center p-4 border border-gray-300 rounded-lg shadow-sm hover:shadow-lg transition-all duration-200"
+                >
+                  <img src={item.img} alt={item.title} className="w-24 h-24 object-cover rounded-lg" />
+                  <div className="ml-4 flex flex-col">
+                    <h2 className="text-xl font-bold">{item.title}</h2>
+                    <p className="text-lg text-gray-700">{item.desc}</p>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p className="text-gray-500 text-center">Ештеңе таңдалмады.</p>
+            )}
+          </div>
       </div>
     </header>
   );
