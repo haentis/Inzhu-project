@@ -9,6 +9,7 @@ import firstRev from '../assets/firstRev.jpg';
 import secondRev from '../assets/secondRev.jpg';
 import lastRev from '../assets/lastRev.jpg';
 import rev from '../../public/rev.jpg';
+import rev2 from '../../public/otziv.jpg';
 import reviewsImage2 from '../assets/reviewsImages2.png';
 
 function Reviews() {
@@ -81,6 +82,18 @@ function Reviews() {
                 немесе бетперде киіп жүргенде майлы жерлерді пудрамен түзету керек болуы мүмкін, әрине, бұл жеке ерекшелік. <br />
                 Алғашында терімде жылтырақ пайда болады деп қорыққан едім, бірақ бейне пікірлерді көріп, менің алаңдауларым<br />
                  артық болды. Жылтырақ өте жұмсақ, барлық тері жарқырап тұрғандай емес, керісінше іштен жарық шашқандай, осы әсерді өте ұнаттым. <br />
+                </p>
+                <img src={reviewsImage2} alt="Reviewer" className="pt-10" />
+                </div>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className="flex flex-row gap-40">
+                <img src={rev2} alt="Review 1" className="w-[400px]" />
+                <div className="w-[500px] h-[500px]">
+                <img src={reviewsImage2} alt="Review Icon 1" />
+                <p className="text-[17px] pt-11">
+                    Кремнің өте жағымды текстурасы бар. Ол жеңіл, сонымен қатар қоректендіретін.
                 </p>
                 <img src={reviewsImage2} alt="Reviewer" className="pt-10" />
                 </div>
