@@ -1,33 +1,33 @@
 import { Link } from "react-router";
-import GirlImage from "../../public/girl.png";
+import logo from "../../public/girlmane.jpeg";
 
-
-function Banner(){
-
-
-
-    return( 
-        <>
-            <div className="w-full h-[700px] flex flex-row justify-center items-center">
-                <div className="w-2/5 h-[600px] flex flex-col justify-center cursor-default">
-                    <p className="text-7xl" style={{ userSelect: "none" }}>
-                    Glowcare - күтімнен<br />
-                    басталатын <br />
-                    жарқырау
-                    </p>
-                   <Link to={'/Quiz'}>
-                        <div className="rounded-lg w-52 h-14 bg-green-900 mt-5 flex items-center justify-center hover:scale-95 bg-green-500 transition duration-300 cursor-pointer">
-                            <p className="text-2xl text-white">Get started</p>
-                        </div>
-                    </Link> 
-                </div>
-                <div className="w-[600px] h-[600px] bg-custom2 flex justify-center items-center">
-                    <img src={GirlImage} alt="Girl" className="w-[500px] h-[600px]" />
-                </div>
-            </div>
-        </>
-    )
+function Banner() {
+  return (
+    <div
+      className="w-full h-[700px] bg-white relative flex items-center justify-center"
+      style={{
+        backgroundImage: `url(${logo})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        opacity: "0.9",
+      }}
+    >
+      <div className="absolute inset-0 bg-white bg-opacity-75" />
+      <div className="relative z-10 text-center">
+        <h1 className="text-6xl font-bold text-gray-800 mb-4">
+          Glowcare
+        </h1>
+        <p className="text-lg text-gray-600 mb-8">
+          Табиғи күтім өнімдерімен жарқын теріге қол жеткізіңіз.
+        </p>
+        <Link to="/Quiz">
+          <button className="rounded-lg w-52 h-14 bg-green-600 text-white text-xl font-semibold hover:bg-green-700 hover:scale-105 transition-transform duration-300">
+            Get started
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
 }
-
 
 export default Banner;

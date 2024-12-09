@@ -1,28 +1,37 @@
-// import firstBlogImage from "../assets/Blogfirst.png"; 
 import { Link } from "react-router";
 import { posts } from "../post/Posts";
 
-function BlogArea(){
-
-    return(
-        <>
-            <div className="w-full  h-[600px]  flex justify-center items-center">
-                {posts.slice(0,3).map((item) => (
-                    <div key={item.id} className="w-[80&] h-[500px]  flex flex-row items-center gap-16 hover:scale-[1.01] ease-in-out duration-300">
-                    <div id="" className="w-[90%] h-[450px]  flex flex-col gap-3 ml-5 rounded-lg border-2  border-gray-500">
-                        <img src={item.imagePost} alt="" />
-                        <p className="cursor-default text-[17px] pl-5">{item.title}</p>
-                        <Link to={`/post/${item.id}`} className="w-[30%] h-[30px] mt-5 cursor-pointer bg-blue-400 flex justify-center items-center rounded-md ml-4 hover:bg-blue-600 ease-in-out duration-200">Learn more</Link>
-                    </div>
-               </div>
-                ))
-                }
+function BlogArea() {
+  return (
+    <div className="w-full py-10 flex justify-center items-center bg-gray-100">
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        {posts.slice(0, 3).map((item) => (
+          <div
+            key={item.id}
+            className="flex flex-col bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          >
+            <img
+              src={item.imagePost}
+              alt={item.title}
+              className="w-full h-64 object-cover"
+            />
+            <div className="p-5 flex flex-col justify-between h-full">
+              <h2 className="text-lg font-semibold mb-2 text-gray-800">{item.title}</h2>
+              {/* <p className="text-gray-600 text-sm line-clamp-3">
+                {item.description || "No description available"}
+              </p> */}
+              <Link
+                to={`/post/${item.id}`}
+                className="mt-4 bg-blue-500 text-white py-2 px-4 text-center rounded-lg hover:bg-blue-600 transition-colors duration-200"
+              >
+                Learn more
+              </Link>
             </div>
-        </>
-    )
-
-
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
-
 
 export default BlogArea;
