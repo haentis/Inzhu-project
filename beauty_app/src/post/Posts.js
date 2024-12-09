@@ -1,4 +1,4 @@
-import car from '../assets/Car.png';
+// import car from '../assets/Car.png';
 import stati3 from '../../public/stati3.jpg';
 import stati4 from '../../public/stati4.jpg';
 import stati1 from '../../public/stati2.jpg';
