@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HeartIcon from '../assets/heartIcon.png';
+import logo from '../../public/logoGlowCare.webp';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,13 @@ function Header() {
 
   return (
     <header className="w-full h-16 flex items-center justify-between px-5 bg-white relative z-40 shadow-xl">
-      <p className="text-xl cursor-default font-bold">GlowCare</p>
+      
+      <p className="text-xl cursor-default font-bold flex items-center">
+        <img src={logo} alt="" className='w-14 h-14 m-2'/>
+        GlowCare 
+      </p>
+
+      
 
       <button
         className="lg:hidden text-xl focus:outline-none"
