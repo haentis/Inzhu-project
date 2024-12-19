@@ -1,4 +1,3 @@
-// import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -10,12 +9,11 @@ import secondRev from '../assets/secondRev.jpg';
 import lastRev from '../assets/lastRev.jpg';
 import rev from '../../public/rev.jpg';
 import rev2 from '../../public/otziv.jpg';
-import reviewsImage2 from '../assets/reviewsImages2.png';
 
 function Reviews() {
   return (
     <div
-      className="w-full h-[1000px] flex justify-center items-center mt-16"
+      className="w-full h-full flex justify-center items-center mt-16 bg-gray-100 py-16"
       style={{ userSelect: 'none' }}
     >
       <Swiper
@@ -24,80 +22,77 @@ function Reviews() {
         pagination={{ clickable: true }}
         spaceBetween={50}
         slidesPerView={1}
-        className="w-4/5 h-[500px] bg-white"
+        className="w-11/12 md:w-4/5 bg-white rounded-lg shadow-lg"
       >
         {/* Первый слайд */}
         <SwiperSlide>
-          <div className="flex flex-row gap-40">
-            <img src={firstRev} alt="Review 1" className="w-[400px]" />
-            <div className="w-[500px] h-[500px]">
-              <img src={reviewsImage2} alt="Review Icon 1" />
-              <p className="text-3xl pt-11">
-              Сыворотка өте күшті, теріні жақсы ылғалдандырады. <br />
-              Тез сіңіп кетеді, әрі бетімді майлы ғылдырып турмайды🔥
+          <div className="flex flex-col md:flex-row items-center gap-8 p-8">
+            <img src={firstRev} alt="Review" className="w-full md:w-1/3 rounded-lg shadow-md" />
+            <div className="w-full md:w-2/3 text-center md:text-left">
+              <p className="text-lg text-gray-700">
+                Сәлеметсіз бе! Сыворотка өте күшті, теріні жақсы ылғалдандырады. Тез сіңіп кетеді,
+                әрі бетімді майлы қылдырмайды🔥. Мен Астана қаласында тұрамын, Астананың суығынан тері қатты зақымданады.
+                Осы сыворотка теріні тез қалпына келтіреді.
               </p>
-              <img src={reviewsImage2} alt="Reviewer" className="pt-10" />
+              <p className="text-xl font-semibold text-blue-600 mt-4">📍 Қала: Астана</p>
             </div>
           </div>
         </SwiperSlide>
 
         {/* Второй слайд */}
         <SwiperSlide>
-            <div className="flex flex-row gap-40">
-                <img src={secondRev} alt="Review 1" className="w-[400px]" />
-                <div className="w-[500px] h-[500px]">
-                <img src={reviewsImage2} alt="Review Icon 1"/>
-                <p className="text-3xl pt-11">
-                    Осы продукцианы жиі аламын, spf кремі өте күшті, кунен теріні жақсы қорғайды, әрі ылғалдандырады. <br />
-                    Осы spf жеңіл жағылады, әрі тез сіңіп кетеді, <br />
-                    жаққанан кейін эффекті 2 реттен байкадым, маған ұнады😍 
-                </p>
-                <img src={reviewsImage2} alt="Reviewer" className="pt-10" />
-                </div>
+          <div className="flex flex-col md:flex-row items-center gap-8 p-8">
+            <img src={secondRev} alt="Review" className="w-full md:w-1/3 rounded-lg shadow-md" />
+            <div className="w-full md:w-2/3 text-center md:text-left">
+              <p className="text-lg text-gray-700">
+                Сәлеметсіздер ме! Алматы қаласында Золотое яблоко дүкенінен осы өнімді жиі аламын. SPF кремі өте күшті,
+                күннен теріні жақсы қорғайды, әрі ылғалдандырады. Жеңіл жағылады, тез сіңіп кетеді. Маған ұнады😍.
+              </p>
+              <p className="text-xl font-semibold text-blue-600 mt-4">📍 Қала: Алматы</p>
             </div>
+          </div>
         </SwiperSlide>
+
+        {/* Третий слайд */}
         <SwiperSlide>
-            <div className="flex flex-row gap-40">
-                <img src={lastRev} alt="Review 1" className="w-[400px]" />
-                <div className="w-[500px] h-[500px]">
-                <img src={reviewsImage2} alt="Review Icon 1" />
-                <p className="text-3xl pt-11">
-                d’alba гельын бырыншы рет алып кордым. Байкаганым оте жаксы тазартады, <br />
-                терыны катты кептырмейды екен. Макияжды барын тап таза жуып тастайды.  <br />
-                Терыге питание береды.👍
-                </p>
-                <img src={reviewsImage2} alt="Reviewer" className="pt-10" />
-                </div>
+          <div className="flex flex-col md:flex-row items-center gap-8 p-8">
+            <img src={lastRev} alt="Review" className="w-full md:w-1/3 rounded-lg shadow-md" />
+            <div className="w-full md:w-2/3 text-center md:text-left">
+              <p className="text-lg text-gray-700">
+                Сәлеметсіз бе! Мен Өскемен қаласынанмын. Золотое яблоко дүкенінен гельді жеткізіп алдым. Өте жақсы тазартады,
+                теріні кептірмейді, әрі макияжды толық кетіреді. Ұнады 👍.
+              </p>
+              <p className="text-xl font-semibold text-blue-600 mt-4">📍 Қала: Өскемен</p>
             </div>
+          </div>
         </SwiperSlide>
+
+        {/* Четвертый слайд */}
         <SwiperSlide>
-            <div className="flex flex-row gap-40">
-                <img src={rev} alt="Review 1" className="w-[400px]" />
-                <div className="w-[500px] h-[500px]">
-                <img src={reviewsImage2} alt="Review Icon 1" />
-                <p className="text-[17px] pt-11">
-                Бұл SPF текстурасы мен қолданған санскриндерімнің ең үздігі болды. 
-                Өте жеңіл, салмақсыз, менің терім оны бірден сіңіріп алды, яғни терімде ешқандай сезім қалмайды,
-                ештеңе жоқ секілді (терім аралас, майлыға бейім). Терім ешқандай майланбады, бірақ күннің соңында <br />
-                немесе бетперде киіп жүргенде майлы жерлерді пудрамен түзету керек болуы мүмкін, әрине, бұл жеке ерекшелік. <br />
-                Алғашында терімде жылтырақ пайда болады деп қорыққан едім, бірақ бейне пікірлерді көріп, менің алаңдауларым<br />
-                 артық болды. Жылтырақ өте жұмсақ, барлық тері жарқырап тұрғандай емес, керісінше іштен жарық шашқандай, осы әсерді өте ұнаттым. <br />
-                </p>
-                <img src={reviewsImage2} alt="Reviewer" className="pt-10" />
-                </div>
+          <div className="flex flex-col md:flex-row items-center gap-8 p-8">
+            <img src={rev} alt="Review" className="w-full md:w-1/3 rounded-lg shadow-md" />
+            <div className="w-full md:w-2/3 text-center md:text-left">
+              <p className="text-lg text-gray-700">
+                Бұл SPF текстурасы мен қолданған санскриндердің ең үздігі болды. Өте жеңіл, салмақсыз,
+                менің терім оны бірден сіңіріп алды. Жылтырақ өте жұмсақ, іштен жарық шашқандай әсер береді. Ұнады!
+              </p>
+              <p className="text-xl font-semibold text-blue-600 mt-4">📍 Қала: Шымкент</p>
             </div>
+          </div>
         </SwiperSlide>
+
+        {/* Пятый слайд */}
         <SwiperSlide>
-            <div className="flex flex-row gap-40">
-                <img src={rev2} alt="Review 1" className="w-[400px]" />
-                <div className="w-[500px] h-[500px]">
-                <img src={reviewsImage2} alt="Review Icon 1" />
-                <p className="text-2xl pt-11">
-                    Кремнің өте жағымды текстурасы бар. Ол жеңіл, сонымен қатар қоректендіретін.
-                </p>
-                <img src={reviewsImage2} alt="Reviewer" className="pt-10" />
-                </div>
+          <div className="flex flex-col md:flex-row items-center gap-8 p-8">
+            <img src={rev2} alt="Review" className="w-full md:w-1/3 rounded-lg shadow-md" />
+            <div className="w-full md:w-2/3 text-center md:text-left">
+              <p className="text-lg text-gray-700">
+                Кремнің өте жағымды текстурасы бар. Ол жеңіл, сонымен қатар қоректендіретін.
+                Ұзақ қолданған соң, терімнің жағдайы жақсарды.
+              </p>
+              <p className="text-xl font-semibold text-blue-600 mt-4">📍 Қала: Ақтау</p>
             </div>
+          </div>
         </SwiperSlide>
       </Swiper>
     </div>

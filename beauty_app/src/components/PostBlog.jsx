@@ -24,7 +24,7 @@ function PostBlog() {
               to={`/post/${item.id}`}
               className="self-start px-6 py-3 bg-blue-500 text-white text-lg rounded-lg hover:bg-blue-600 transition-colors duration-300"
             >
-              Read full
+              Толығырақ оқу
             </Link>
           </div>
         </div>

@@ -31,11 +31,27 @@ function Post() {
         <>
             <Header />
             <div className="w-[96%] mx-auto h-auto bg-white flex flex-col gap-5 p-5 shadow-md rounded-lg">
-                <img
-                    src={post.imagePost}
-                    alt={post.title}
-                    className="w-[500px] h-auto max-h-[600px] object-cover rounded-lg mb-5"
-                />
+                {/* Контейнер для изображения и видео */}
+                <div className="flex gap-5 items-start">
+                    {/* Изображение поста */}
+                    <img
+                        src={post.imagePost}
+                        alt={post.title}
+                        className="w-[50%] h-auto max-h-[600px] object-cover rounded-lg mb-5"
+                    />
+                    {/* Видео из поста справа от изображения */}
+                    {post.video && (
+                        <div className="w-[45%]">
+                            <video
+                                controls
+                                className="w-full h-[600px] rounded-lg"
+                            >
+                                <source src={post.video} type="video/mp4" />
+                                Ваш браузер не поддерживает видео.
+                            </video>
+                        </div>
+                    )}
+                </div>
                 <div className="flex flex-col gap-5">
                     <p className="text-4xl font-bold text-gray-800">{post.title}</p>
                     <p className="text-2xl text-gray-600 leading-relaxed">{post.textBlog}</p>

@@ -48,7 +48,7 @@ function Header() {
           Өнім карталары
         </Link>
         <Link to="/contact" className="block px-4 py-2 text-lg lg:px-0 lg:py-0" style={{userSelect: "none"}}>
-          Контакты
+          Байланыс нөмері
         </Link>
         <button onClick={() => setIsOpenCart(!isOpenCart)} className="relative" style={{userSelect: "none"}}>
           <img src={HeartIcon} alt="Heart" className="w-6 h-6 pt-2" />

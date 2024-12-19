@@ -16,7 +16,7 @@ function Posts() {
                     <div className="flex items-center justify-between p-6 bg-gray-800 text-white rounded-t-lg">
                         <Link to={'/katalog'} className="flex items-center gap-2 text-xl hover:opacity-80">
                             <img src={backIcon} alt="Back" className="w-8 h-8 transform transition-transform hover:translate-x-[-16px] duration-300" />
-                            <span>Назад к каталогу</span>
+                            <span>Каталогқа оралу</span>
                         </Link>
                     </div>
                     <div className="flex flex-col lg:flex-row gap-8 p-8">

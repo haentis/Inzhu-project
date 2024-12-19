@@ -24,7 +24,7 @@ function BlogArea() {
                 to={`/post/${item.id}`}
                 className="mt-4 bg-blue-500 text-white py-2 px-4 text-center rounded-lg hover:bg-blue-600 transition-colors duration-200"
               >
-                Learn more
+                Толығырақ оқу
               </Link>
             </div>
           </div>

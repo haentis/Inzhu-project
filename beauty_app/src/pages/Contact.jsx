@@ -27,10 +27,10 @@ function Contact() {
         <>
         <Header/>
         <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-            <h1 className="text-3xl font-semibold text-center text-gray-800 mb-6">Контакты</h1>
+            <h1 className="text-3xl font-semibold text-center text-gray-800 mb-6">Байланыс нөмері</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-600">Имя:</label>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-600">Аты-жөні:</label>
                     <input
                         type="text"
                         id="name"
@@ -56,7 +56,7 @@ function Contact() {
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-600">Сообщение:</label>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-600">Хаттама:</label>
                     <textarea
                         id="message"
                         name="message"
@@ -68,13 +68,13 @@ function Contact() {
                 </div>
 
                 <button type="submit" className="w-full p-3 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                    Отправить
+                    Жіберу
                 </button>
             </form>
             <div className="mt-8 text-center">
-                <h3 className="text-xl font-medium text-gray-800">Наши контакты:</h3>
+                <h3 className="text-xl font-medium text-gray-800">Байланыс нөмері:</h3>
                 <p className="text-gray-600">Email: contact@glowcare.com</p>
-                <p className="text-gray-600">Телефон: +7 (123) 456-78-90</p>
+                <p className="text-gray-600">Нөмері: +7 (123) 456-78-90</p>
             </div>
         </div>
         </>
